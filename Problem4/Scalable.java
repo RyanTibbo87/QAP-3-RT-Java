@@ -1,5 +1,7 @@
 package Problem4;
 
-public class Scalable {
-    
+// Interface Scalable
+public interface Scalable {
+    // Method to scale an object
+    void scale(double scaleFactor);
 }
