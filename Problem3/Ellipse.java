@@ -1,5 +1,25 @@
 package Problem3;
 
-public class Ellipse {
-    
+public class Ellipse extends Shape {
+    private double majorAxis;
+    private double minorAxis;
+
+    // Constructor
+    public Ellipse(String name, double majorAxis, double minorAxis) {
+        super(name);
+        this.majorAxis = Math.max(majorAxis, minorAxis);
+        this.minorAxis = Math.min(majorAxis, minorAxis);
+    }
+
+    // Area of ellipse
+    @Override
+    public double getArea() {
+        return Math.PI * majorAxis * minorAxis;
+    }
+
+    // Perimeter of ellipse (approximation)
+    @Override
+    public double getPerimeter() {
+        return Math.PI * Math.sqrt(2 * (majorAxis * majorAxis + minorAxis * minorAxis));
+    }
 }
